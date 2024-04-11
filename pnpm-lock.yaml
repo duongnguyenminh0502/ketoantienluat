@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@netlify/plugin-nextjs':
+    specifier: ^5.0.0
+    version: 5.0.0
   next:
     specifier: 14.1.4
     version: 14.1.4(react-dom@18.2.0)(react@18.2.0)
@@ -161,6 +164,11 @@ packages:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.4.15
     dev: true
+
+  /@netlify/plugin-nextjs@5.0.0:
+    resolution: {integrity: sha512-LAeQ6ltXsJyxtk2wDwb75Pu80A+duQvEtDB9Y3xJ16+mb2bQXv5sV9Y6dCdyTCBQjw1h0UGv1bL3vPDLG6Wlcw==}
+    engines: {node: '>=18.0.0'}
+    dev: false
 
   /@next/env@14.1.4:
     resolution: {integrity: sha512-e7X7bbn3Z6DWnDi75UWn+REgAbLEqxI8Tq2pkFOFAMpWAWApz/YCUhtWMWn410h8Q2fYiYL7Yg5OlxMOCfFjJQ==}
