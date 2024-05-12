@@ -6,7 +6,7 @@
 
 :root {
   --site-pad: 1.2rem;
-  --max-bound: 1440px;
+  --max-bound: 1320px;
 
   --max-content: calc(var(--max-bound) - 2 * var(--site-pad));
   --max-padding: max(var(--site-pad), calc((100vw - var(--max-content)) / 2));

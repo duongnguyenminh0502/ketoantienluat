@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      animation: {
+        "spin-slow": "spin 20s linear infinite",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -15,6 +18,13 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    {
+      // @ts-ignore
+      tailwindcss: {},
+      autoprefixer: {},
+      ...(process.env.NODE_ENV === "production" ? { cssnano: {} } : {}),
+    },
+  ],
 };
 export default config;

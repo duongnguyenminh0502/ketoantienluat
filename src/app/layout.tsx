@@ -1,13 +1,13 @@
-import { GoogleAnalytics } from "@next/third-parties/google";
+import { ColorSchemeScript, MantineProvider, createTheme } from "@mantine/core";
+import Provider from "_@/app/provider";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Header from "_@/app/_ui/header";
+import Footer from "_@/app/_ui/footer";
 
 const inter = Inter({
   subsets: ["latin"],
 });
-
-import Provider from "_@/app/provider";
-import Contact from "_@/app/ui/contact";
 
 const metadataConstants = {
   siteName: "Dịch Vụ Thành Lập Công Ty Trọn Gói",
@@ -43,6 +43,10 @@ export const metadata = {
   },
 };
 
+const theme = createTheme({
+  /** Put your mantine theme override here */
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -50,11 +54,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="vi">
-      <body className={"relative " + inter.className}>
-        <Contact />
-        <Provider>{children}</Provider>
+      <head>
+        <ColorSchemeScript />
+        <meta
+          name="google-site-verification"
+          content="oNeWgQ2IbJ0EYzlzUb_47FvcleDgtYpxuvCf2LFs1hs"
+        />
+      </head>
+      <body className={"bg-blue-50/50 " + inter.className}>
+        <Provider>
+          <MantineProvider theme={theme}>
+            <main className="grid grid-cols-[1fr_calc(min(100vw,_var(--max-bound))_-_(var(--site-pad)*2))_1fr] [&>*]:col-span-1 [&>*]:col-start-2 overflow-auto scroll-smooth">
+              {children}
+            </main>
+          </MantineProvider>
+        </Provider>
+        <Footer />
       </body>
-      <GoogleAnalytics gaId="G-QFKL86RNVN" />
     </html>
   );
 }
