@@ -1,6 +1,6 @@
 "use client";
-import { IconArrowUp } from "@tabler/icons-react";
 import { useEffect, useRef } from "react";
+import { FaArrowUp } from "react-icons/fa";
 
 export default function MoveToTop() {
   const ref = useRef<HTMLDivElement>(null);
@@ -36,7 +36,7 @@ export default function MoveToTop() {
           });
         }}
       >
-        <IconArrowUp />
+        <FaArrowUp />
       </button>
     </div>
   );

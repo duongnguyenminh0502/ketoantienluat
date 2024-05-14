@@ -24,7 +24,7 @@ export default function Hero() {
         sizes="(max-width: 800px) 100vw, 800px"
         height={460}
         width={620}
-        className="top-0 right-0 z-[-1] absolute opacity-0 lg:opacity-100 h-full"
+        className="lg:block top-0 right-0 z-[-1] absolute hidden h-full"
       />
     </section>
   );

@@ -4,7 +4,7 @@ import { GoStarFill } from "react-icons/go";
 
 export default function InformationToBeProvided() {
   return (
-    <section>
+    <section id="4" className="scroll-my-10">
       <div className="items-center gap-10 grid lg:grid-cols-[1fr,1fr]">
         <div className="gap-4 grid">
           <div className="gap-4 grid">

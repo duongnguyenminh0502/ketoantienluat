@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Procedure() {
   return (
-    <section>
+    <section id="6" className="scroll-my-10">
       <div className="gap-8 lg:gap-16 grid lg:grid-cols-[4fr_6fr]">
         <div className="gap-4 grid">
           <H2>Quy trình cung cấp dịch vụ thành lập công ty tại Tiến Luật</H2>

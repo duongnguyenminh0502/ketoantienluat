@@ -10,7 +10,7 @@ export default function Questions() {
     dataWithIndex.slice(len / 2 + 1),
   ];
   return (
-    <section>
+    <section id="8" className="scroll-my-10">
       <div>
         <H2>Một số câu hỏi thường gặp khi thành lập công ty, doanh nghiệp</H2>
 
@@ -57,7 +57,7 @@ const Collapse = ({
         name="collapse-question"
         id={`collapse-question-${index}`}
         type="checkbox"
-        className="hidden peer"
+        className="peer"
       />
       <label
         htmlFor={`collapse-question-${index}`}
@@ -74,13 +74,13 @@ const Collapse = ({
               <span>{title}</span>
             </p>
             {/* dấu trừ khi đóng, dấu cộng khi mở */}
-            <button className="relative pt-6 w-4 pointer-events-none">
+            <div className="relative pt-6 w-4 pointer-events-none">
               <span
                 id="caret"
                 className="top-1/2 left-1/2 absolute bg-neutral-80 bg-red-600 w-4 h-[2.5px] -translate-x-1/2 -translate-y-1/2 rotate-90"
               />
               <span className="top-1/2 left-1/2 absolute bg-neutral-80 bg-red-600 w-4 h-[2.5px] -translate-x-1/2 -translate-y-1/2" />
-            </button>
+            </div>
           </div>
 
           <div

@@ -1,33 +1,33 @@
 "use client";
-// import "aos/dist/aos.css";
 import { PropsWithChildren, useEffect } from "react";
 
 export default function Provider({ children }: PropsWithChildren) {
   useEffect(() => {
     const interval = setInterval(() => {
-      const zalo = document.getElementById("zalo");
-      if (!zalo) return;
+      const zalos = document.querySelectorAll('[data-link="zalo"]');
+      if (!zalos) return;
       var zalo_acc = ["0339597989", "mcczqanjpvap"];
-
-      zalo.addEventListener("click", (event) => {
-        event.preventDefault();
-        const userAgent = navigator.userAgent.toLowerCase();
-        console.log("???? ~ zalo.addEventListener ~ userAgent:", userAgent);
-        const isIOS = /iphone|ipad|ipod/.test(userAgent);
-        const isAndroid = /android/.test(userAgent);
-        let redirectURL = null;
-        if (isIOS) {
-          redirectURL = "zalo://qr/p/" + zalo_acc[1];
-          window.location.href = redirectURL;
-        } else if (isAndroid) {
-          redirectURL = "zalo://zaloapp.com/qr/p/" + zalo_acc[1];
-          window.location.href = redirectURL;
-        } else {
-          redirectURL = "zalo://conversation?phone=" + zalo_acc[0];
-          window.location.href = redirectURL;
-        }
+      zalos.forEach((zalo) => {
+        zalo.addEventListener("click", (event) => {
+          event.preventDefault();
+          const userAgent = navigator.userAgent.toLowerCase();
+          console.log("???? ~ zalo.addEventListener ~ userAgent:", userAgent);
+          const isIOS = /iphone|ipad|ipod/.test(userAgent);
+          const isAndroid = /android/.test(userAgent);
+          let redirectURL = null;
+          if (isIOS) {
+            redirectURL = "zalo://qr/p/" + zalo_acc[1];
+            window.location.href = redirectURL;
+          } else if (isAndroid) {
+            redirectURL = "zalo://zaloapp.com/qr/p/" + zalo_acc[1];
+            window.location.href = redirectURL;
+          } else {
+            redirectURL = "zalo://conversation?phone=" + zalo_acc[0];
+            window.location.href = redirectURL;
+          }
+        });
+        zalo.classList.remove("opacity-0");
       });
-      zalo.classList.remove("opacity-0");
       clearInterval(interval);
     }, 300);
   }, []);

@@ -1,8 +1,6 @@
-import { ColorSchemeScript, MantineProvider, createTheme } from "@mantine/core";
 import Provider from "_@/app/provider";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Header from "_@/app/_ui/header";
 import Footer from "_@/app/_ui/footer";
 
 const inter = Inter({
@@ -43,33 +41,43 @@ export const metadata = {
   },
 };
 
-const theme = createTheme({
-  /** Put your mantine theme override here */
-});
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="vi">
+    <html lang="vi" className="scroll-smooth">
       <head>
-        <ColorSchemeScript />
-        <meta
-          name="google-site-verification"
-          content="oNeWgQ2IbJ0EYzlzUb_47FvcleDgtYpxuvCf2LFs1hs"
-        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+                (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-KN2X2NJL');
+            `,
+          }}
+        ></script>
       </head>
       <body className={"bg-blue-50/50 " + inter.className}>
         <Provider>
-          <MantineProvider theme={theme}>
-            <main className="grid grid-cols-[1fr_calc(min(100vw,_var(--max-bound))_-_(var(--site-pad)*2))_1fr] [&>*]:col-span-1 [&>*]:col-start-2 overflow-auto scroll-smooth">
-              {children}
-            </main>
-          </MantineProvider>
+          <main className="grid grid-cols-[1fr_calc(min(100vw,_var(--max-bound))_-_(var(--site-pad)*2))_1fr] [&>*]:col-span-1 [&>*]:col-start-2 overflow-auto scroll-smooth">
+            {children}
+          </main>
         </Provider>
         <Footer />
+        <noscript
+          dangerouslySetInnerHTML={{
+            __html: `
+          
+           <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KN2X2NJL"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+         
+            `,
+          }}
+        ></noscript>
       </body>
     </html>
   );

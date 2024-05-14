@@ -11,13 +11,19 @@ export default function Header() {
       <div className="sm:block hidden">
         <ul className="flex items-center gap-8">
           <li>
-            <button className="flex items-center gap-2 hover:text-blue-700">
+            <a
+              data-link="zalo"
+              href="https://zalo.me/0339597989"
+              className="flex items-center gap-2 hover:text-blue-700"
+            >
               <FaPhoneAlt />
               <span>0339.597.989</span>
-            </button>
+            </a>
           </li>
           <li>
-            <Button>ĐĂNG KÝ TƯ VẤN</Button>
+            <a data-link="zalo" href="https://zalo.me/0339597989">
+              <Button>ĐĂNG KÝ TƯ VẤN</Button>
+            </a>
           </li>
         </ul>
       </div>

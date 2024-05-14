@@ -1,5 +1,5 @@
-import { IconPhone } from "@tabler/icons-react";
 import Image from "next/image";
+import { FaPhoneAlt } from "react-icons/fa";
 
 export default function Contact() {
   return (
@@ -9,6 +9,7 @@ export default function Contact() {
         aria-label="Zalo"
         target="_blank"
         rel="noopener"
+        data-link="zalo"
         href="https://zalo.me/0339597989"
         className="place-content-center grid opacity-0 p-2 rounded-full cycle zalo-theme"
       >
@@ -31,7 +32,7 @@ export default function Contact() {
         className="place-content-center grid p-2 rounded-full cycle phone-theme"
       >
         <div className="place-content-center grid rounded-full w-full h-full overflow-hidden">
-          <IconPhone size={40} className="text-green-800" />
+          <FaPhoneAlt size={40} className="text-green-800" />
         </div>
       </a>
     </div>

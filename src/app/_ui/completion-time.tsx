@@ -4,7 +4,7 @@ import { GoStarFill } from "react-icons/go";
 
 export default function CompletionTime() {
   return (
-    <section>
+    <section id="3" className="scroll-my-10">
       <div className="items-center gap-10 grid lg:grid-cols-[1fr,1fr]">
         <Image
           src="/images/time.webp"

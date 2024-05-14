@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function CostEstimates() {
   return (
-    <section>
+    <section id="2" className="scroll-my-10">
       <div className="gap-10 grid">
         <div className="gap-6 lg:gap-10 grid lg:grid-cols-2">
           <H2>Bảng dự toán tổng chi phí thành lập công ty</H2>
@@ -74,11 +74,17 @@ export default function CostEstimates() {
           </div>
 
           <div className="gap-6 grid lg:grid-cols-2 col-span-2 mx-auto">
-            <button className="lg:block hidden hover:bg-blue-100 px-2 py-3 border border-blue-600 rounded-lg text-blue-600">
+            <a
+              data-link="zalo"
+              href="https://zalo.me/0339597989"
+              className="lg:block hidden hover:bg-blue-100 px-2 py-3 border border-blue-600 rounded-lg text-blue-600"
+            >
               <span className="font-medium">Tư vấn cho tôi: </span>
               0339.597.989
-            </button>
-            <Button>Đặt dịch vụ</Button>
+            </a>
+            <a data-link="zalo" href="https://zalo.me/0339597989">
+              <Button>Đặt dịch vụ</Button>
+            </a>
           </div>
         </div>
 
@@ -102,10 +108,11 @@ export default function CostEstimates() {
               cầu thực hiện thành lập công ty trong thời gian sớm nhất, có thể
               liên hệ Hotline/Zalo:
             </p>
-
-            <Button>
-              <span className="font-semibold">Zalo: </span> 0339.597.989
-            </Button>
+            <a data-link="zalo" href="https://zalo.me/0339597989">
+              <Button>
+                <span className="font-semibold">Zalo: </span> 0339.597.989
+              </Button>
+            </a>
           </div>
         </div>
       </div>

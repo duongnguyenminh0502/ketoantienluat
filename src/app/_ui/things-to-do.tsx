@@ -5,7 +5,7 @@ import { MdOutlineKeyboardArrowUp } from "react-icons/md";
 
 export default function ThingTodo() {
   return (
-    <section>
+    <section id="7" className="scroll-my-10">
       <div className="gap-20 grid lg:grid-cols-[4fr_6fr]">
         <div>
           <H2>Năm 2024, những việc cần làm sau khi thành lập công ty</H2>
@@ -71,13 +71,13 @@ const Collapse = ({
             <p className="font-medium text-blue-900">
               <span>{index + 1}.</span> <span>{title}</span>
             </p>
-            <button className="relative pt-6 w-4 pointer-events-none">
+            <div className="relative pt-6 w-4 pointer-events-none">
               <span
                 id="caret"
                 className="top-1/2 left-1/2 absolute bg-neutral-80 bg-red-600 w-4 h-[2.5px] -translate-x-1/2 -translate-y-1/2 rotate-90"
               />
               <span className="top-1/2 left-1/2 absolute bg-neutral-80 bg-red-600 w-4 h-[2.5px] -translate-x-1/2 -translate-y-1/2" />
-            </button>
+            </div>
           </div>
 
           <div

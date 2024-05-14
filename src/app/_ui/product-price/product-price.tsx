@@ -6,7 +6,7 @@ import { GoStarFill } from "react-icons/go";
 
 export default function ProductPrice() {
   return (
-    <section>
+    <section id="1" className="scroll-my-10">
       <div className="gap-8 lg:gap-16 grid">
         <div className="gap-6 lg:gap-10 grid lg:grid-cols-2">
           <H2>

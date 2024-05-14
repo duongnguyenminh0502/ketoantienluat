@@ -37,7 +37,7 @@ export default function ContactFooter() {
                 <span className="font-medium">Mã số thuế: </span>
                 0318181365
               </p>
-              <a href="phone:0339597989">
+              <a data-link="zalo" href="https://zalo.me/0339597989">
                 <span className="font-medium">Điện thoại: </span>0339.597.989
               </a>
             </div>

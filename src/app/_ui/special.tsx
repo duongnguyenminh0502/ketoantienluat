@@ -2,7 +2,7 @@ import H2 from "_@/app/_comps/H2";
 
 export default function Special() {
   return (
-    <section>
+    <section id="5" className="scroll-my-10">
       <div className="gap-10 grid">
         <div className="gap-10 grid lg:grid-cols-[2fr_3fr]">
           <H2>
@@ -27,9 +27,9 @@ export default function Special() {
                 {index + 1}
               </p>
               <div className="content-start gap-2 grid">
-                <h5 className="font-medium text-lg text-orange-800 lg:text-xl">
+                <p className="font-medium text-lg text-orange-800 lg:text-xl">
                   {item.title}
-                </h5>
+                </p>
                 <ul className="gap-1 grid">
                   {item.items.map((item, index) => {
                     const [title, content] = item.split(": ");

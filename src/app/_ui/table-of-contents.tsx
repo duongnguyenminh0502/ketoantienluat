@@ -40,9 +40,6 @@ const data = [
     content: "Quy trình cung cấp dịch vụ thành lập công ty tại Tiến Luật",
   },
   {
-    content: "Hướng dẫn lựa chọn loại hình công ty phù hợp",
-  },
-  {
     content: "Năm 2024, những việc cần làm sau khi thành lập công ty",
   },
   {
