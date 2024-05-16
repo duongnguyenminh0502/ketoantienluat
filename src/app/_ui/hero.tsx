@@ -5,7 +5,7 @@ export default function Hero() {
     <section className="relative px-[--max-padding] lg:pr-0 lg:h-[calc(400rem/16)]">
       <div className="gap-4 grid pt-8 lg:pt-16 max-w-[760px]">
         <h1 className="font-semibold text-4xl text-blue-800">
-          Dịch vụ thành lập công ty, doanh nghiệp trọn gói (2024)
+          Dịch Vụ Thành Lập Doanh Nghiệp & Báo Cáo Thuế (2024)
         </h1>
         <p className="text-blue-800">
           Tiến Luật là một đơn vị chuyên cung cấp dịch vụ thành lập công ty theo

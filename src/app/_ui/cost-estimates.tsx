@@ -80,7 +80,7 @@ export default function CostEstimates() {
               className="lg:block hidden hover:bg-blue-100 px-2 py-3 border border-blue-600 rounded-lg text-blue-600"
             >
               <span className="font-medium">Tư vấn cho tôi: </span>
-              0339.597.989
+              03.39.59.79.89
             </a>
             <a data-link="zalo" href="https://zalo.me/0339597989">
               <Button>Đặt dịch vụ</Button>
@@ -110,7 +110,7 @@ export default function CostEstimates() {
             </p>
             <a data-link="zalo" href="https://zalo.me/0339597989">
               <Button>
-                <span className="font-semibold">Zalo: </span> 0339.597.989
+                <span className="font-semibold">Zalo: </span> 03.39.59.79.89
               </Button>
             </a>
           </div>

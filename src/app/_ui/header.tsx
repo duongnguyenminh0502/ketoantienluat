@@ -4,7 +4,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 
 export default function Header() {
   return (
-    <header className="flex items-center py-2">
+    <header className="flex items-center">
       <div className="mx-auto sm:mx-0 sm:mr-auto">
         <Logo />
       </div>
@@ -17,7 +17,7 @@ export default function Header() {
               className="flex items-center gap-2 hover:text-blue-700"
             >
               <FaPhoneAlt />
-              <span>0339.597.989</span>
+              <span>03.39.59.79.89</span>
             </a>
           </li>
           <li>
