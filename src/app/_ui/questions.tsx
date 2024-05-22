@@ -57,7 +57,7 @@ const Collapse = ({
         name="collapse-question"
         id={`collapse-question-${index}`}
         type="checkbox"
-        className="peer"
+        className="hidden peer"
       />
       <label
         htmlFor={`collapse-question-${index}`}
