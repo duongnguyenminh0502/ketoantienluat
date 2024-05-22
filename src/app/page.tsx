@@ -14,6 +14,7 @@ import TableOfContents from "_@/app/_ui/table-of-contents";
 import Thankyou from "_@/app/_ui/thankyou";
 import ThingsToDo from "_@/app/_ui/things-to-do";
 
+export const revalidate = 31536000;
 export default function Home() {
   return (
     <>
